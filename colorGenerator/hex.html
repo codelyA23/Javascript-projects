@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Flipper</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1><a href="index.html">Color Flipper</a></h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Simple</a>
+          </li>
+          <li>
+            <a href="hex.html" class="active">Hex</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="fixed">
+        <h2>Background Color: <span id="color">#F0F0F0</span></h2>
+      </div>
+      <div class="button">
+        <button id="btn">Change Color</button>
+      </div>
+    </main>
+  </body>
+  <script>
+    const btn = document.getElementById("btn");
+    const body = document.getElementById("main");
+    const colorText = document.getElementById("color");
+    const chars = "123456789ABCDEF";
+
+    btn.addEventListener("click", () => {
+      let randomHex = "#";
+      for (let char = 0; char < 6; char++) {
+        random = chars[Math.floor(Math.random() * chars.length)];
+        randomHex += random;
+      }
+
+      body.style.background = randomHex;
+      colorText.textContent = randomHex;
+    });
+  </script>
+</html>

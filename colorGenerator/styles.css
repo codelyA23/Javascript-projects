@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 70px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f5f7fa;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(0, 208, 236, 0.3));
+    backdrop-filter: blur(12px);
+    padding: 1rem 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header h1 a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+    transition: color 0.3s ease;
+}
+
+header h1 a:hover {
+    color: #00d0ec;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 208, 236, 0.5);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 208, 236, 0.3);
+}
+
+main {
+    height: calc(100vh - 70px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background: #f0f0f0;
+}
+
+main .fixed {
+    width: 50%;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 2px 6px rgba(255, 255, 255, 0.2);
+}
+
+main .button button {
+    padding: 1rem;
+    background-color: rgb(33, 47, 61);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1.5px solid #00d0ec;
+}
+
+main .button button:hover {
+    background-color: rgb(42, 59, 76);
+    color: #fff;
+    box-shadow: 0 0 12px rgba(0, 208, 236, 0.8);
+}
+
+main .button button:active {
+    scale: 0.97;
+    transition: all 0.1s ease;
+}
+
+.active {
+    background-color: #00d0ec;
+    color: #fff;
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+    header h1 a {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        margin-left: 5px;
+    }
+
+    main .fixed {
+        width: 90%;
+        padding: 1rem 1.2rem;
+        gap: 2rem;
+        text-align: center;
+    }
+}
