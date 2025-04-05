@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #cfcfcf;
+}
+
+#num {
+    font-size: 100px;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+
+}
+
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgba(21, 21, 125, 0.543);
+    background: #4dbcc2;
+
+}
+
+#reset {
+    margin: 0 20px;
+}
+
+button:hover {
+    background-color: #45a3a8;
+    transform: scale(1.1);
+}
